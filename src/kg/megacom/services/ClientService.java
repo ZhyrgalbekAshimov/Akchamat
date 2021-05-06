@@ -8,6 +8,8 @@ public interface ClientService {
     ClientService INSTANCE = new ClientServiceImpl();
 
     Client findOrCreateClient(String phone, String idCard);
+    int setCreditForClient(Client client, int creditOption);
+    boolean payCredit(String phone, String idCard, double amount);
     void blockClient();
 
 
